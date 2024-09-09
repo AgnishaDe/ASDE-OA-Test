@@ -7,10 +7,13 @@ int dp(int power, int index, int skip, int recharge, int iniPower, vector<int> &
 	if (index > 10) return 1;
 	
 	// checking if the answer of this sub-problem is already stored in 'mem' or not. If it is stored, simply returning the answer.
-	if (power >= 0 && power < mem.size() && index <= 10 && skip < mem[0][0].size() && recharge < mem[0][0][0].size()) {
+	if (power >= 0 && power < mem.size() && index <= 10 && skip < mem[0][0].size() && recharge < mem[0][0][0].size()) 
+	{
         if(mem[power][index][skip][recharge] != -1)
             return mem[power][index][skip][recharge];
-    } else {
+    } 
+	else 
+	{
         return 0;  
     }
 
